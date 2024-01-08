@@ -2,7 +2,7 @@
 
 DATE=($date)
 
-echo "sript execution date and time :$DATE"
+echo "sript execution date and time :{$DATE}"
 
 PERSON1=$1
 PERSON2=$2
