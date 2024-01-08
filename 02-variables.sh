@@ -2,7 +2,10 @@
 
 #general conversation
 
-echo "Ramesh: Hi Suresh, Good Morning"
-echo "Suresh: Hello Ramesh, Very Good Morning"
-echo "Ramesh: How are you doing sureh?"
-echo "Suresh: I am doing good what about you ramesh?"
+PERSON1=$Ramesh
+PERSON2=$Suresh
+
+echo "$PERSON1: Hi $PERSON2, Good Morning"
+echo "$PERSON2: Hello $PERSON1, Very Good Morning"
+echo "$PERSON1: How are you doing $PERSON2?"
+echo "$PERSON2: I am doing good what about you $PERSON1?"
