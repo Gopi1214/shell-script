@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATE=($date)
+DATE=$(date)
 
 echo "sript execution date and time :{$DATE}"
 
