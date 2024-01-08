@@ -1,9 +1,11 @@
 #!/bin/bash
 
-#general conversation
+DATE=($date)
 
-PERSON1=$Ramesh
-PERSON2=$Suresh
+echo "sript execution date and time :$DATE"
+
+PERSON1=$1
+PERSON2=$2
 
 echo "$PERSON1: Hi $PERSON2, Good Morning"
 echo "$PERSON2: Hello $PERSON1, Very Good Morning"
