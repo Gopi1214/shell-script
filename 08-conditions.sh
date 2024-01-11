@@ -11,4 +11,4 @@ then
 else
 
     echo "given number is not greater than 100"
-    
+fi
