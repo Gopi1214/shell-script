@@ -8,3 +8,4 @@ then
 else
     echo "user is able to install mysql"
     yum install mysql -y
+fi
