@@ -12,14 +12,14 @@ VALIDATE(){
     fi
 }
 
-    if [ $ID -ne 0 ]
-    then
+if [ $ID -ne 0 ]
+then
     echo "user has no root access and not able to install."
     exit 1
 
-    else
+else
     echo "user has root access."
-    fi
+fi
 
     yum install mysql -y
 
