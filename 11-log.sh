@@ -29,7 +29,7 @@ else
     echo -e "$G user has root access. $N"
 fi
 
-yum install mysql -y &>> $LOG_FILE
+yum install mysqlll -y &>> $LOG_FILE
 
 VALIDATE $? "Installing MySql"
 
