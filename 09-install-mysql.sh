@@ -7,7 +7,7 @@ then
     echo "ERROR:: user has no root acces, so not allwed to install mysql."
     exit 1 #you can give other than 0
 else
-    echo "root user install mysql."
+    echo "you are root user installing mysql."
    
 fi #fi is reverse of if, indicating the end of condition
 
@@ -15,9 +15,18 @@ yum install mysql -y
 
 if [ $? != 0 ]
 then
-    echo "ERROR:: installation was failed."
+    echo "ERROR:: installation was FAILED."
     exit 1
 else
-    echo "installation was success".
+    echo "installation of mysql was SUCCESS".
 fi
 
+yum install gitss -y
+
+if [ $? != 0 ]
+then 
+    echo "ERROR:: installation was FAILED."
+    exit 1
+else
+    echo "installation of git was SUCCESS."
+fi
