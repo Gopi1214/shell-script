@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ID=$(id)
+ID=$(id -u)
 
 VALIDATE(){
     if [ $1 != 0 ]
@@ -8,7 +8,7 @@ VALIDATE(){
         echo "ERROR::$2 was....FAILED."
         exit 1
     else
-        echo "$2....was SUCCESS".
+        echo "$2....was SUCCESS."
     fi
 }
 
