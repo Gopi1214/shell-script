@@ -6,23 +6,27 @@ DATE=$(date +%F-%H-%M-%S)
 
 LOG_FILE="/tmp/$0-$DATE.log"
 
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+
 VALIDATE(){
     if [ $1 != 0 ]
     then
-        echo "ERROR::$2 was....FAILED."
+        echo -e "ERROR::$2 was....$R FAILED."
         exit 1
     else
-        echo "$2....was SUCCESS."
+        echo -e "$2....was $G SUCCESS."
     fi
 }
 
 if [ $ID -ne 0 ]
 then
-    echo "user has no root access and not able to install."
+    echo -e "$R user has no root access and not able to install."
     exit 1
 
 else
-    echo "user has root access."
+    echo -e "$G user has root access."
 fi
 
 yum install mysql -y &>> $LOG_FILE
