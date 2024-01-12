@@ -2,11 +2,11 @@
 
 ID=$(id -u)
 
-if [ $ID != 0 ]
+if [ $ID -ne 0 ]
 then
-    echo "user has no root acces, so not allwed to install mysql"
+  echo "user has no root acces, so not allwed to install mysql."
 else
-    echo "user is able to install mysql"
+  echo "root user install mysql."
    
 fi #fi is reverse of if, indicating the end of condition
 
