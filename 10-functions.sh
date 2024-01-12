@@ -21,10 +21,10 @@ else
     echo "user has root access."
 fi
 
-    yum install mysql -y
+yum install mysql -y
 
-    VALIDATE $? Installing MySql
+VALIDATE $? Installing MySql
 
-    yum install git -y
+yum install git -y
 
-    VALIDATE $? Installing Git
+VALIDATE $? Installing Git
