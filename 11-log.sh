@@ -2,11 +2,9 @@
 
 ID=$(id -u)
 
-echo "Script name: $0"
-
 DATE=$(date +%F-%H-%M-%S)
 
-LOG_FILE="/tmp/$0-$DATE.log
+LOG_FILE="/tmp/$0-$DATE.log"
 
 VALIDATE(){
     if [ $1 != 0 ]
@@ -27,10 +25,10 @@ else
     echo "user has root access."
 fi
 
-yum install mysql -y
+yum install mysql -y &>> $LOG_FILE
 
 VALIDATE $? "Installing MySql"
 
-yum install git -y
+yum install git -y  &>> $LOG_FILE
 
 VALIDATE $? "Installing Git"
