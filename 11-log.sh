@@ -10,6 +10,8 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
+echo "script started running at $DATE" &>> $LOG_FILE
+
 VALIDATE(){
     if [ $1 != 0 ]
     then
@@ -29,7 +31,7 @@ else
     echo -e "$G user has root access. $N"
 fi
 
-yum install mysqlll -y &>> $LOG_FILE
+yum install mysql -y &>> $LOG_FILE
 
 VALIDATE $? "Installing MySql"
 
