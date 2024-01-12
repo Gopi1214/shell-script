@@ -4,6 +4,10 @@ ID=$(id -u)
 
 echo "Script name: $0"
 
+DATE=$(date +%F-%H-%M-%S)
+
+LOG_FILE="/tmp/$0-$DATE.log
+
 VALIDATE(){
     if [ $1 != 0 ]
     then
