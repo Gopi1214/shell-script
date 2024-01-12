@@ -7,5 +7,7 @@ then
     echo "user has no root acces, so not allwed to install mysql"
 else
     echo "user is able to install mysql"
-    yum install mysql -y
-fi
+   
+fi #fi is reverse of if, indicating the end of condition
+
+yum install mysql -y
