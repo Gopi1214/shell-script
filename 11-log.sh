@@ -13,20 +13,20 @@ N="\e[0m"
 VALIDATE(){
     if [ $1 != 0 ]
     then
-        echo -e "ERROR::$2 was....$R FAILED $N."
+        echo -e "ERROR::$2 was....$R FAILED $N"
         exit 1
     else
-        echo -e "$2....was $G SUCCESS $N."
+        echo -e "$2....was $G SUCCESS $N"
     fi
 }
 
 if [ $ID -ne 0 ]
 then
-    echo -e "$R user has no root access and not able to install."
+    echo -e "$R user has no root access and not able to install. $N"
     exit 1
 
 else
-    echo -e "$G user has root access."
+    echo -e "$G user has root access. $N"
 fi
 
 yum install mysql -y &>> $LOG_FILE
