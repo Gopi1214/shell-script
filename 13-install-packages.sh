@@ -12,7 +12,7 @@
 
     echo "script started running at $TIMESTAMP" &>> $LOGFILE
 
-    #function for validation weather installation was success or failed
+    #function for validation wether installation was success or failed
 
     VALIDATE(){
         if [ $1 -ne 0 ]
