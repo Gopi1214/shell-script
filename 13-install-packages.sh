@@ -12,6 +12,8 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "script started running at $TIMESTAMP" &>> $LOGFILE
 
+#function for validation weather installation was success or failed
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
@@ -22,6 +24,7 @@ VALIDATE(){
     fi
 }
 
+#checking user has root access or not
 
 if [ $ID -ne 0 ]
 then 
@@ -38,6 +41,7 @@ fi
 
 for package in $@
 do 
+    #checking weather the package is already installed
     yum list installed $package &>> $LOGFILE
     if [ $? -ne 0 ]
     then 
