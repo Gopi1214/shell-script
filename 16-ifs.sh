@@ -19,9 +19,9 @@ fi
 #f -->> files
 #m -->> morethan 
 
-while IFS=":" read -r Username Password UID GID GECOS Home_directory Command
+while IFS=":" read -r Username Password user_id group_id Home_directory Command
 do
     echo "username: $Username"
     echo "Password: $Password"
-    echo "UID: $UID"
+    echo "UID: $user_id"
 done < $file
