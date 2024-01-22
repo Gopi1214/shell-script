@@ -20,5 +20,5 @@ while IFS=read -r line;
 do
     echo "Delete files: $line"
     rm -rf $line
-done << $FIND_OLD_FILES
+done <<< $FIND_OLD_FILES
 
