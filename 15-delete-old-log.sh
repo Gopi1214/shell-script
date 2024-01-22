@@ -16,7 +16,7 @@ fi
 
 FIND_OLD_FILES=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
 
-while IFS=read -r line
+while IFS= read -r line
 do
     echo "Delete files: $line"
     rm -rf $line
