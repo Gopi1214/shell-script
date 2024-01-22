@@ -23,5 +23,5 @@ while IFS=":" read -r Username Password UID GID GECOS Home_directory Command
 do
     echo "username: $Username"
     echo "Password: $Password"
-    echo "UID": $UID"
+    echo "UID: $UID"
 done < $file
