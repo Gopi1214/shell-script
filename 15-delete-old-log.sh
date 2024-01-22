@@ -14,7 +14,7 @@ then
 
 fi
 
-FIND_OLD_FILES=$(find $SOURCE_DIR -type f -mtime +14 "*.log")
+FIND_OLD_FILES=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
 
 while IFS=read -r line; 
 do
