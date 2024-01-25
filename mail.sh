@@ -8,4 +8,4 @@ SUBJECT=$5
 
 FINAL_BODY=$(sed -e 's/Team/$TO_TEAM/g' -e 's/ALERT_TYPE/$ALERT_TYPE/g' -e 's/BODY/$BODY/g' template.html)
 
-echo "$FINAL_BODY" | mail -s "$SUBJECT" "$TO_ADDRESS"
+echo "$FINAL_BODY" | mail -s "$SUBJECT \nContent-Type: text/html" "$TO_ADDRESS"
