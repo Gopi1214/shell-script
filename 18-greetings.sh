@@ -11,7 +11,7 @@ USAGE(){
     echo "-h, help and exit"
 }
 
-while getops ":n:w:h" arg; do
+while getopts ":n:w:h" arg; do
     case $arg in
         n)name=$OPTARG;;
         w)wishes=$OPTARG;;
