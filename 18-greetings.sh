@@ -11,10 +11,11 @@ USAGE(){
     echo "-h, help and exit"
 }
 
-while getopts ":n:w:h" arg; do
-    case $arg in
-        n)name=$OPTARG;;
-        w)wishes=$OPTARG;;
-        h|*) usage;;
+while getopts ":n:w:h" opt; do
+    case $opt in
+        n) NAME="$OPTARG";;
+        w) WISHES="$OPTARG";;
+        h|*) USAGE;;
+        :) USAGE;;
     esac
 done
