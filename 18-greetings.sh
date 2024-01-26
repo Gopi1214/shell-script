@@ -15,8 +15,6 @@ while getopts ":n:w:h" opt; do
     case "${opt}" in
         n) NAME=${OPTARG};;
         w) WISHES=${OPTARG};;
-        h|*) USAGE;;
-        :) USAGE;;
     esac
 done
 
