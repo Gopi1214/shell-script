@@ -24,5 +24,5 @@ if [ -z "${n}" ] || [ -z "${w}" ]; then
     usage
 fi
 
-echo "s = ${s}"
-echo "p = ${p}"
+echo "s = ${n}"
+echo "p = ${w}"
