@@ -38,3 +38,12 @@ while getopts ":s:p:" o; do
             ;;
     esac
 done
+
+shift $((OPTIND-1))
+
+if [ -z "${s}" ] || [ -z "${p}" ]; then
+    usage
+fi
+
+echo "s = ${s}"
+echo "p = ${p}"
