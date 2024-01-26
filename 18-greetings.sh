@@ -20,9 +20,11 @@ while getopts ":n:w:h" opt; do
     esac
 done
 
-if [ -z "${n}" ] || [ -z "${w}" ]; then
-    usage
+if [ -z "$NAME" ] || [ -z "$WISHES" ]; then
+    echo "ERROR: -n and -w are mandatory"
+    USAGE
+    exit 1
 fi
 
-echo "n = ${n}"
-echo "w = ${w}"
+echo "Hello $NAME. $wishes I am learning shell script"
+
